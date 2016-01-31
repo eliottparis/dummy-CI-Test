@@ -11,4 +11,4 @@ environment:
 #       PLATFORM: x64
 
 build_script:
-   - make
+   - cmake
