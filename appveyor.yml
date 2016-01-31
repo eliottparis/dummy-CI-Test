@@ -1,0 +1,14 @@
+
+environment:
+   matrix:
+      - CONFIGURATION: Debug
+        PLATFORM: Win32
+#     - CONFIGURATION: Release
+#       PLATFORM: Win32
+      - CONFIGURATION: Debug
+        PLATFORM: x64
+#     - CONFIGURATION: Release
+#       PLATFORM: x64
+
+build_script:
+   - make
