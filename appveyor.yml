@@ -1,14 +1,23 @@
+clone_depth: 50
 
 environment:
    matrix:
-      - CONFIGURATION: Debug
+      - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+        MSVS: 2015
+        MSBUILD: 14.0
+        CONFIGURATION: Debug
         PLATFORM: Win32
-#     - CONFIGURATION: Release
-#       PLATFORM: Win32
-      - CONFIGURATION: Debug
-        PLATFORM: x64
-#     - CONFIGURATION: Release
-#       PLATFORM: x64
 
-build_script:
-   - cmake
+      - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+        MSVS: 2017
+        MSBUILD: 15.0
+        CONFIGURATION: Debug
+        PLATFORM: x64
+
+install:
+   - python --version
+
+build_script: false
+
+test_script:
+   - python test.py
