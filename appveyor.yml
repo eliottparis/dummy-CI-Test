@@ -17,7 +17,8 @@ environment:
 install:
    - python --version
 
-build_script: false
-
-test_script:
+build_script:
    - python test.py
+
+# test_script:
+#    - python test.py
