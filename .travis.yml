@@ -1,7 +1,9 @@
 language: cpp
 dist: trusty
 sudo: required
-sudo: required
+python:
+  - 2.7
+  - 3.7
 
 matrix:
    include:
@@ -9,8 +11,6 @@ matrix:
          osx_image: xcode9.3
          compiler: clang
          env: CONFIGURATION=Debug   PYTHON=3
-         # before_install:
-         #    - HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade python
          install:
             - HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade python
          script:
@@ -23,6 +23,7 @@ matrix:
          env: CONFIGURATION=Debug
          install:
             - python --version
+            - python3 --version
 
       -  os: linux
          compiler: gcc
