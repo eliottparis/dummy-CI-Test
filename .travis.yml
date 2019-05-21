@@ -1,6 +1,7 @@
 language: cpp
 dist: trusty
 sudo: required
+sudo: required
 
 matrix:
    include:
@@ -9,9 +10,7 @@ matrix:
          compiler: clang
          env: CONFIGURATION=Debug   PYTHON=3.7
          before_install:
-            - python --version
-            # - python3 --version
-            - brew upgrade python
+            - HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade python
             - python --version
             - python3 --version
          install:
