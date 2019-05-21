@@ -9,9 +9,10 @@ matrix:
          osx_image: xcode9.3
          compiler: clang
          env: CONFIGURATION=Debug   PYTHON=3
-         before_install:
-            - HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade python
+         # before_install:
+         #    - HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade python
          install:
+            - HOMEBREW_NO_AUTO_UPDATE=1 brew upgrade python
             - python3 test.py
          script:
             - make
