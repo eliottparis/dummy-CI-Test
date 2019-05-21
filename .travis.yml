@@ -10,7 +10,7 @@ matrix:
          env: CONFIGURATION=Debug   PYTHON=3.7
          before_install:
             - python --version
-            - python3 --version
+            # - python3 --version
             - brew install python
             - python --version
             - python3 --version
