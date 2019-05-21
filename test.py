@@ -29,7 +29,7 @@ def main ():
    print ('print')
    print ('print')
    line = 'printline'
-   print(line, end='')
+   print (line, end='')
 
 ##############################################################################
 
