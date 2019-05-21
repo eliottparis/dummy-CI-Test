@@ -8,6 +8,12 @@ matrix:
          osx_image: xcode9.3
          compiler: clang
          env: CONFIGURATION=Debug   PYTHON=3.7
+         before_install:
+            - python --version
+            - python3 --version
+            - brew install python
+            - python --version
+            - python3 --version
          install:
             - python --version
 
