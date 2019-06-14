@@ -21,7 +21,6 @@ matrix:
          install:
             - python --version
             - which python
-            - which python3
 
       -  os: linux
          compiler: gcc

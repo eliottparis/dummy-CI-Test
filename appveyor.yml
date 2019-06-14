@@ -2,16 +2,19 @@ clone_depth: 50
 
 environment:
    matrix:
-      - configuration: Debug
-        platform: Win32
+      - CONFIGURATION: Debug
+        PLATFORM: Win32
+        PYTHON: "C:\\Python27"
 
-      - configuration: Debug
-        platform: x64
+      - CONFIGURATION: Debug
+        PLATFORM: x64
+        PYTHON: "C:\\Python37"
 
 install:
    #- set PATH=C:\Python37-x64;%PATH%
    #- set PATH=C:\Python27;%PATH%
-   - set PATH=C:\Python37;%PATH%
+   #- set PATH=C:\Python37;%PATH%
+   - set PATH=($env:PYTHON);%PATH%
 
 build_script: true
 
