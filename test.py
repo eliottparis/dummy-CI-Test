@@ -14,6 +14,8 @@ import os
 import subprocess
 import sys
 
+import sub
+
 if sys.version_info < (2, 7):
    print >> sys.stderr, 'This script requires python 2.7 or greater.'
    sys.exit (1)
@@ -50,6 +52,8 @@ def main ():
 
    cmd = [python_exe, 'sub.py']
    subprocess.check_call (cmd)
+
+   sub.test_sub ()
 
 ##############################################################################
 

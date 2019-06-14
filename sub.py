@@ -14,6 +14,10 @@ import sys
 
 ##############################################################################
 
+def test_sub ():
+   print ('############')
+   print ('- test_sub => python version:', sys.version)
+
 if __name__ == '__main__':
    print ('############')
    print ('- sub => python version:', sys.version)
