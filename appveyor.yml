@@ -8,7 +8,7 @@ environment:
 
       - CONFIGURATION: Debug
         PLATFORM: x64
-        PYTHON_PATH: "C:\\Python37"
+        PYTHON_PATH: "C:\\Python37-x64"
 
 install:
    #- set PATH=C:\Python37-x64;%PATH%
