@@ -10,7 +10,8 @@ environment:
 
 install:
    #- set PATH=C:\Python37-x64;%PATH%
-   - set PATH=C:\Python27;%PATH%
+   #- set PATH=C:\Python27;%PATH%
+   - set PATH=C:\Python37;%PATH%
 
 build_script: true
 
