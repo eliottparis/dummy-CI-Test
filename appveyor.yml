@@ -14,9 +14,8 @@ install:
    #- set PATH=C:\Python37-x64;%PATH%
    #- set PATH=C:\Python27;%PATH%
    #- set PATH=C:\Python37;%PATH%
-   - echo %PATH%
    - echo %PYTHON_PATH%
-   - set PATH=($env:PYTHON_PATH);%PATH%
+   - set PATH=%PYTHON_PATH%;%PATH%
 
 build_script: true
 
