@@ -2,20 +2,18 @@ clone_depth: 50
 
 environment:
    matrix:
-      - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
-        MSVS: 2015
-        MSBUILD: 14.0
-        CONFIGURATION: Debug
-        PLATFORM: Win32
+      - CONFIGURATION: Debug
+         PLATFORM: Win32
+         install:
+            - set PATH=C:\Python27;%PATH%
+         test_script:
+            - python --version
+            - python test.py
 
-      - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-        MSVS: 2017
-        MSBUILD: 15.0
-        CONFIGURATION: Debug
-        PLATFORM: x64
-
-install:
-   - python --version
-
-test_script:
-   - python test.py
+      - CONFIGURATION: Debug
+         PLATFORM: x64
+         install:
+            - set PATH=C:\Python37-x64;%PATH%
+         test_script:
+            - python --version
+            - python test.py
