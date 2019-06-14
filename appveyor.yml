@@ -4,17 +4,17 @@ environment:
    matrix:
       - CONFIGURATION: Debug
         PLATFORM: Win32
-        PYTHON: "C:\\Python27"
+        PYTHON_PATH: "C:\\Python27"
 
       - CONFIGURATION: Debug
         PLATFORM: x64
-        PYTHON: "C:\\Python37"
+        PYTHON_PATH: "C:\\Python37"
 
 install:
    #- set PATH=C:\Python37-x64;%PATH%
    #- set PATH=C:\Python27;%PATH%
    #- set PATH=C:\Python37;%PATH%
-   - set PATH=($env:PYTHON);%PATH%
+   - set PATH=($env:PYTHON_PATH);%PATH%
 
 build_script: true
 
