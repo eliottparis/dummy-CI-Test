@@ -4,16 +4,15 @@ environment:
    matrix:
       - configuration: Debug
         platform: Win32
-        install:
-          - set PATH=C:\Python27;%PATH%
-        build_script:
-          - python --version
-          - python test.py
 
       - configuration: Debug
         platform: x64
-        install:
-          - set PATH=C:\Python37-x64;%PATH%
-        build_script:
-          - python --version
-          - python test.py
+
+install:
+   #- set PATH=C:\Python37-x64;%PATH%
+   - set PATH=C:\Python27;%PATH%
+
+build_script: true
+
+test_script:
+   - python test.py
