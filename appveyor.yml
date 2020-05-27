@@ -17,7 +17,7 @@ environment:
 install:
    - set PATH=%PYTHON%;%PATH%
    - echo %PYTHON_EXE%
-   - '%PYTHON_EXE%' --version
+   - '%PYTHON_EXE% --version'
 
 build_script: true
 
