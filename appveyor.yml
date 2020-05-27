@@ -18,6 +18,9 @@ install:
    - set PATH=%PYTHON%;%PATH%
    - echo %PYTHON_EXE%
    - '%PYTHON_EXE% --version'
+   - '%PYTHON_EXE% -m pip --version'
+   - '%PYTHON_EXE% -m pip install pybind11'
+   - '%PYTHON_EXE% -m pybind11 --include'
 
 build_script: true
 
