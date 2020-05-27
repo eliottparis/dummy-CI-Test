@@ -46,6 +46,19 @@ matrix:
          install:
             - python --version
 
+      -  os: linux
+         dist: bionic
+         compiler: gcc
+         addons:
+            apt:
+               packages: ['python3-pip']
+         env: JOB=LinuxGcc
+         install:
+            - export PY3_CMD=python3
+            - $PY3_CMD -m pip --version
+            - $PY3_CMD -m pip install pybind11
+            - $PY3_CMD -m pybind11 --include
+
 
 
 script:
