@@ -2,16 +2,21 @@ clone_depth: 50
 
 environment:
    matrix:
-      - CONFIGURATION: Debug
+      - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+        CONFIGURATION: Debug
         PLATFORM: Win32
         PYTHON: "C:\\Python27"
+        PYTHON_EXE: C:\Python27\python.exe
 
-      - CONFIGURATION: Debug
+      - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+        CONFIGURATION: Debug
         PLATFORM: x64
         PYTHON: "C:\\Python37-x64"
+        PYTHON_EXE: C:\Python37-x64\python.exe
 
 install:
    - set PATH=%PYTHON%;%PATH%
+   - echo %PYTHON_EXE%
 
 build_script: true
 
