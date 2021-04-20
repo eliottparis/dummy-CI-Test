@@ -1,14 +1,21 @@
-language: cpp
+dist: bionic
 
-compiler:
-- clang
-- gcc
+# branches:
+#    only:
+#       - master
 
-os:
-- linux
-- osx
+matrix:
+   include:
+      -  os: linux
+         compiler: gcc
+         language: cpp
 
-script: make
+         install:
+            - python --version
+            - pip --version
+            - pip show requests
+            - python -m pip install requests
 
-notifications:
-  email: false
+
+script:
+   - python check.py
