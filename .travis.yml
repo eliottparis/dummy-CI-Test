@@ -16,6 +16,7 @@ matrix:
             - pip show requests
             - pip show urllib3
             - pip show chardet
+            - python -m pip install boto3
             - python -m pip install requests
 
 
