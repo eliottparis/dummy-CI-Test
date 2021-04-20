@@ -13,17 +13,8 @@ matrix:
          install:
             - python --version
             - pip --version
-            - pip show requests
-            - pip show urllib3
-            - pip show chardet
-            - python -m pip install --upgrade pip
-            - pip --version
             - python -m pip install boto3
-            - pip show requests
-            - pip show urllib3
-            - pip show chardet
-            - python -m pip install requests
-            # - python -m pip install requests -U
+            - python -m pip install --upgrade requests
             - pip show requests
             - pip show urllib3
             - pip show chardet
