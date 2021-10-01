@@ -1,5 +1,9 @@
 language: cpp
 
+branches:
+   only:
+      - master
+
 compiler:
 - clang
 - gcc
@@ -11,4 +15,4 @@ os:
 script: make
 
 notifications:
-  email: false
+   email: false
