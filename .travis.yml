@@ -1,9 +1,5 @@
 dist: focal
 
-branches:
-   only:
-      - master
-
 
 matrix:
    include:
