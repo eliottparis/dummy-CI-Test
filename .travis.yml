@@ -7,6 +7,9 @@ matrix:
       -  os: linux
          env:
             - JOB_NAME: job1
+      -  os: linux
+         env:
+            - JOB_NAME: job2
 
 
 script:
