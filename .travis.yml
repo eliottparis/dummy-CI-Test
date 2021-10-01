@@ -1,9 +1,6 @@
 dist: focal
 
-branches:
-   only:
-      - master
-
+if: (type = pull_request AND branch = master)
 
 matrix:
    include:
