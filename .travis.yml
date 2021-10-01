@@ -1,12 +1,12 @@
 dist: focal
 
+if: (type = pull_request AND branch = master)
 
 matrix:
    include:
-      if: (type = pull_request AND branch = master)
-         -  os: linux
-            env:
-               - JOB_NAME: job1
+      -  os: linux
+         env:
+            - JOB_NAME: job1
 
 
 script:
