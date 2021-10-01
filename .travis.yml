@@ -1,6 +1,6 @@
 dist: focal
 
-if: (type = pull_request AND branch = master)
+if: (branch = master AND (type = pull_request OR type = cron))
 
 matrix:
    include:
