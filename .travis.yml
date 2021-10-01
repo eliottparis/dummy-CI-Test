@@ -1,5 +1,6 @@
 dist: focal
 
+if: (type = pull_request AND branch = master)
 
 matrix:
    include:
