@@ -4,15 +4,17 @@ branches:
    only:
       - master
 
-compiler:
-- clang
-- gcc
 
-os:
-- linux
-- osx
+matrix:
+   include:
+      -  os: linux
+         env:
+            - JOB_NAME: job1
 
-script: make
+
+script:
+   - python3 check.py
+
 
 notifications:
    email: false
